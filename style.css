@@ -1,12 +1,18 @@
 body{
     font-family: 'Roboto', sans-serif;
-    background-color: black;
+    background-color: #111;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+}
+
+/*----- BUTTONS -----*/
+
+button{
+    cursor: pointer;
 }
 
 #btn-modal{
@@ -18,127 +24,7 @@ body{
 
 #btn-modal:hover{
     filter: contrast(120%);
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-	0% {
-		box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
-	}
-
-	70% {
-		box-shadow: 0 0 0 10px rgba(255, 0, 0, 0);
-	}
-
-	100% {
-		box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
-	}
-}
-
-#modal-container{
-    z-index: 999;
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-    transition: 0.2;
-}
-
-.show{
-    display: flex !important;
-    animation: fade 0.5s;
-}
-
-@keyframes fade {
-    from{
-        filter: opacity(0%);
-    }to{
-        filter: opacity(100%);
-    }
-}
-
-.flex{
-    display: flex;
-}
-
-.row{
-    flex-direction: row;
-}
-
-.column{
-    flex-direction: column;
-}
-
-h2{
-    text-align: center;
-    margin-top: 70px;
-    margin-bottom: 15px;
-}
-
-button{
-    cursor: pointer;
-}
-
-#login-container{
-    min-width: 320px;
-    height: 774px;
-    background-color: #F9F9F9;
-    padding: 40px;
-    align-items: center;
-}
-
-#logo-container{
-    margin-top: 35px;
-    width: 120px;
-}
-
-#logo-container img{
-    max-width: 100%;
-    max-height: 100%;
-}
-
-#img-container{
-    background-image: url('assets/img/login.jpg');
-    background-size: cover;
-    height: 854px;
-    width: 1280px;
-}
-
-#img-container img{
-    max-width: 1296px;
-}
-
-#form-container{
-    width: 300px;
-}
-
-#checkbox-container *{
-    cursor: pointer;
-}
-
-#inputs-container input[type='checkbox']{
-    background-color: #E7E7E7;
-    border: none;
-    align-self: flex-start;
-    filter: hue-rotate(135deg);
-}
-
-#inputs-container a {
-    text-decoration: none;
-    color: #979797;
-    font-weight: 900;
-    font-size: 11px;
-    text-align: center;
-    width: fit-content;
-    align-self: center;
-}
-
-#inputs-container a:hover{
-    color: #111;
+    animation: pulse 1.8s infinite;
 }
 
 #social-btns{
@@ -219,6 +105,49 @@ button{
     filter: invert(90%);
 }
 
+#btn-close{
+    background-color: rgba(1, 1, 1, 0);
+    color: #AAA;
+    border: none;
+    position: relative;
+    left: 98%;
+    font-weight: 100;
+    font-size: 17px;
+    width: 25px;
+}
+
+#btn-close:hover{
+    background-color: rgba(255, 1, 1, 1);
+    color: #FFF;
+}
+
+/*----- INPUTS -----*/
+
+#checkbox-container *{
+    cursor: pointer;
+}
+
+#inputs-container input[type='checkbox']{
+    background-color: #E7E7E7;
+    border: none;
+    align-self: flex-start;
+    filter: hue-rotate(135deg);
+}
+
+#inputs-container a {
+    text-decoration: none;
+    color: #979797;
+    font-weight: 900;
+    font-size: 11px;
+    text-align: center;
+    width: fit-content;
+    align-self: center;
+}
+
+#inputs-container a:hover{
+    color: #111;
+}
+
 .custom-input{
     background-color: #F1F1F1;
     padding: 17px 10px 10px 10px;
@@ -241,11 +170,6 @@ button{
 
 .custom-input:focus{
     background-color: #F9F9F9;
-}
-
-#modal-container{
-    justify-content: center;
-    align-items: center;
 }
 
 #password-toggle{
@@ -283,18 +207,145 @@ button{
     top: 17px;
 }
 
-#btn-close{
-    background-color: rgba(1, 1, 1, 0);
-    color: #AAA;
-    border: none;
-    position: relative;
-    left: 98%;
-    font-weight: 100;
-    font-size: 17px;
-    width: 25px;
+/*----- MODAL -----*/
+
+#modal-container{
+    z-index: 999;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    transition: 0.2;
 }
 
-#btn-close:hover{
-    background-color: rgba(255, 1, 1, 1);
-    color: #FFF;
+.show{
+    display: flex !important;
+    animation: fade 0.5s;
+}
+
+#login-container{
+    min-width: 320px;
+    height: 774px;
+    background-color: #F9F9F9;
+    padding: 40px;
+    align-items: center;
+}
+
+h2{
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 15px;
+}
+
+#logo-container{
+    margin-top: 35px;
+    width: 120px;
+}
+
+#logo-container img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#img-container{
+    background-image: url('assets/img/login.jpg');
+    background-size: cover;
+    height: 854px;
+    width: 70vw;
+}
+
+#img-container img{
+    max-width: 1296px;
+}
+
+#form-container{
+    width: 300px;
+}
+
+#modal-container{
+    justify-content: center;
+    align-items: center;
+}
+
+/*----- FLEX CLASSES -----*/
+
+.flex{
+    display: flex;
+}
+
+.row{
+    flex-direction: row;
+}
+
+.column{
+    flex-direction: column;
+}
+
+/*----- ANIMATIONS -----*/
+
+@keyframes pulse {
+	0% {
+		box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
+	}
+
+	70% {
+		box-shadow: 0 0 0 10px rgba(255, 0, 0, 0);
+	}
+
+	100% {
+		box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+	}
+}
+
+@keyframes fade {
+    from{
+        filter: opacity(0%);
+    }to{
+        filter: opacity(100%);
+    }
+}
+
+/*----- MEDIA QUERIES -----*/
+
+@media screen and (max-width:1400px) {
+    #img-container{
+        width: 55vw;
+    }
+}
+
+@media screen and (max-width:960px) {
+    #img-container{
+        width: 0;
+    }
+
+    body{
+        height: 100vh;
+        width: 100vw;
+        background-color: #E7E7E7;
+    }
+
+    #modal-container{
+        z-index: 999;
+        display: flex;
+        justify-content: center;
+        position: unset;
+        top: unset;
+        left: unset;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+        transition: 0.2;
+    }
+
+    #btn-modal{
+        display: none;
+    }
+
+    #btn-close{
+        display: none;
+    }
 }
