@@ -15,39 +15,44 @@
 </head>
 
 <body>
-    <div id="frame" class="flex row">
-        <section id="login-container" class="flex column">
-            <div id="logo-container">
-                <img src="/assets/img/riot-logo.png" alt="">
-            </div>
-            <div id="form-container" class="flex column">
-                <h2>Sign in</h2>
-                <div id="inputs-container" class="flex column">
-                    <label id="custom-username" for="username-input" class="custom-placeholder">USERNAME</label>
-                    <input id="username-input" class="custom-input" type="text" placeholder="">
-                    
-                    <label id="custom-password" for="password-input" class="custom-placeholder">PASSWORD</label>
-                    <input id="password-input" class="custom-input" type="password" placeholder="" data-vision=false>
-                    <span id="password-toggle" for="password-input"><img id="eye" src="/assets/img/eye-slash.svg" alt=""></span>
 
-                    <div id="social-btns" class="flex row">
-                        <button id="btn-facebook" class="social-button"><img src="/assets/img/facebook.svg" alt=""></button>
-                        <button id="btn-google" class="social-button"><img src="/assets/img/google.svg" alt=""></button>
-                        <button id="btn-apple" class="social-button"><img src="/assets/img/apple.svg" alt=""></button>
-                    </div>
+    <button id="btn-modal"><img src="assets/img/riot-logo-2.png" alt=""></button>
 
-                    <div id="checkbox-container">
-                        <input type="checkbox" id="checkbox-stay">
-                        <label for="checkbox-stay">Stay signed in</label>
-                    </div>
-                    <button id="btn-login" class="disabled"><img src="/assets/img/arrow-right.svg" alt=""></button>
-                    <a href="#">CAN'T SIGN IN?</a>
+    <div id="modal-container">
+        <div id="modal-frame" class="flex row">
+            <section id="login-container" class="flex column">
+                <div id="logo-container">
+                    <img src="/assets/img/riot-logo.png" alt="">
                 </div>
-            </div>
-        </section>
-        <section id="img-container">
-            <img src="/assets/img/login-2.jpg" alt="">
-        </section>
+                <div id="form-container" class="flex column">
+                    <h2>Sign in</h2>
+                    <div id="inputs-container" class="flex column">
+                        <label id="custom-username" for="username-input" class="custom-placeholder">USERNAME</label>
+                        <input id="username-input" class="custom-input" type="text" placeholder="">
+                        
+                        <label id="custom-password" for="password-input" class="custom-placeholder">PASSWORD</label>
+                        <input id="password-input" class="custom-input" type="password" placeholder="" data-vision=false>
+                        <span id="password-toggle" for="password-input"><img id="eye" src="/assets/img/eye-slash.svg" alt=""></span>
+    
+                        <div id="social-btns" class="flex row">
+                            <button id="btn-facebook" class="social-button"><img src="/assets/img/facebook.svg" alt=""></button>
+                            <button id="btn-google" class="social-button"><img src="/assets/img/google.svg" alt=""></button>
+                            <button id="btn-apple" class="social-button"><img src="/assets/img/apple.svg" alt=""></button>
+                        </div>
+    
+                        <div id="checkbox-container">
+                            <input type="checkbox" id="checkbox-stay">
+                            <label for="checkbox-stay">Stay signed in</label>
+                        </div>
+                        <button id="btn-login" class="disabled"><img src="/assets/img/arrow-right.svg" alt=""></button>
+                        <a href="#">CAN'T SIGN IN?</a>
+                    </div>
+                </div>
+            </section>
+            <section id="img-container">
+                <button id="btn-close">X</button>
+            </section>
+        </div>
     </div>
 </body>
 

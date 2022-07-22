@@ -82,3 +82,14 @@ function checkInputs() {
 
     return checkUser && checkPass;
 }
+
+const modal = document.getElementById('modal-container');
+const btnModal = document.getElementById('btn-modal');
+btnModal.addEventListener('click', () => {
+    modal.classList.add('show');
+});
+
+const btnClose = document.getElementById('btn-close');
+btnClose.addEventListener('click', () => {
+    modal.classList.remove('show');
+});

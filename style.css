@@ -3,6 +3,62 @@ body{
     background-color: black;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#btn-modal{
+    background-color: rgba(255, 0, 0, 0);
+    border: none;
+    border-radius: 50%;
+    box-shadow: 5px 5px 15px -7px rgba(255, 0, 0, 0.3);
+}
+
+#btn-modal:hover{
+    filter: contrast(120%);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+	0% {
+		box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
+	}
+
+	70% {
+		box-shadow: 0 0 0 10px rgba(255, 0, 0, 0);
+	}
+
+	100% {
+		box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+	}
+}
+
+#modal-container{
+    z-index: 999;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    transition: 0.2;
+}
+
+.show{
+    display: flex !important;
+    animation: fade 0.5s;
+}
+
+@keyframes fade {
+    from{
+        filter: opacity(0%);
+    }to{
+        filter: opacity(100%);
+    }
 }
 
 .flex{
@@ -46,8 +102,10 @@ button{
 }
 
 #img-container{
-    /*height: 100vh;
-    width: 100vw;*/
+    background-image: url('assets/img/login.jpg');
+    background-size: cover;
+    height: 854px;
+    width: 1280px;
 }
 
 #img-container img{
@@ -75,6 +133,8 @@ button{
     font-weight: 900;
     font-size: 11px;
     text-align: center;
+    width: fit-content;
+    align-self: center;
 }
 
 #inputs-container a:hover{
@@ -221,4 +281,20 @@ button{
     font-size: 10px;
     left: 10px;
     top: 17px;
+}
+
+#btn-close{
+    background-color: rgba(1, 1, 1, 0);
+    color: #AAA;
+    border: none;
+    position: relative;
+    left: 98%;
+    font-weight: 100;
+    font-size: 17px;
+    width: 25px;
+}
+
+#btn-close:hover{
+    background-color: rgba(255, 1, 1, 1);
+    color: #FFF;
 }
