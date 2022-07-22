@@ -109,8 +109,8 @@ button{
     background-color: rgba(1, 1, 1, 0);
     color: #AAA;
     border: none;
-    position: relative;
-    left: 98%;
+    position: absolute;
+    right: 1px;
     font-weight: 100;
     font-size: 17px;
     width: 25px;
@@ -254,6 +254,7 @@ h2{
 #img-container{
     background-image: url('assets/img/login.jpg');
     background-size: cover;
+    position: relative;
     height: 854px;
     width: 70vw;
 }
@@ -313,7 +314,17 @@ h2{
 
 @media screen and (max-width:1400px) {
     #img-container{
+        height: 710px;
         width: 55vw;
+    }
+
+    #login-container{
+        height: 650px;
+        padding: 30px;
+    }
+
+    #btn-login{
+        margin-top: 100px;
     }
 }
 
