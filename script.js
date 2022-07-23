@@ -34,11 +34,11 @@ eyeIcon.addEventListener('click', () => {
     if(passwordInput.dataset.vision == 'false'){
         passwordInput.dataset.vision = true;
         passwordInput.setAttribute('type', 'text');
-        eyeIcon.setAttribute('src', '/assets/img/eye.svg');
+        eyeIcon.setAttribute('src', './assets/img/eye.svg');
     }else{
         passwordInput.dataset.vision = false;
         passwordInput.setAttribute('type', 'password');
-        eyeIcon.setAttribute('src', '/assets/img/eye-slash.svg');
+        eyeIcon.setAttribute('src', './assets/img/eye-slash.svg');
     }
 });
 
