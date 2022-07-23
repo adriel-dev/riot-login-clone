@@ -9,3 +9,5 @@
 **•**  A ideia do projeto foi fazer um "clone" da tela de login do Riot Client, com o intuito de treino de HTML, CSS e Javascript.
 
 ### A aplicação pode ser acessada através do link: [`Riot Login Clone`](https://adriel-dev.github.io/riot-login-clone/)
+
+![](gif1.gif)
