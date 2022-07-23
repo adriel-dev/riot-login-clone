@@ -11,3 +11,5 @@
 ### A aplicação pode ser acessada através do link: [`Riot Login Clone`](https://adriel-dev.github.io/riot-login-clone/)
 
 ![](gif1.gif)
+![](gif2.gif)
+![](gif3.gif)
